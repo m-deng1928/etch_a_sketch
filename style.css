@@ -1,0 +1,125 @@
+html,
+    body {
+        min-width: 640px;
+        min-height: 640px;
+        width: 100%;
+        height: 100%;
+}
+
+main {
+    display: flex;
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: end;
+    align-content: center;
+}
+
+button {
+    color: white;
+    background: blue;
+    padding: 16px 32px 16px 32px;
+    margin: 0px 8px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.global_container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 15% 85%;
+    justify-content: center;
+}
+
+.button_container {
+    margin: 16px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+.title {
+    color: black;
+    font-weight: bold;
+    font-size: 48px;
+    text-align: center;
+
+}
+
+.color {
+    background-color: rgba(0, 0, 0, .25);
+}
+
+.tool_container {
+    display: grid;
+    height: 560px;
+    width: 560px;
+    grid-template-rows: 496px 64px;
+    grid-template-columns: 64px 1fr 64px;
+}
+
+.outer_grid_container {
+    grid-area: 1 / 1 / span 2 / span 3;
+    border: red 64px solid;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.inner_grid_container {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex;
+    align-items: stretch;
+}
+
+.box {
+    flex-grow: 1;
+    background-color: rgba(155, 174, 255, 0.50);
+    border: 1px  rgba(0, 0, 0, 1.0) solid;
+}
+
+.left_tool_button {
+    grid-area: 2 / 1 / span 1 / span 1;
+    margin: 0px 0px 8px 16px;
+}
+
+.right_tool_button {
+    grid-area: 2 / 3 / span 1 / span 1;
+    margin: 0px 16px 8px 0px;
+}
+
+.left_tool_button,
+    .right_tool_button {
+        height: 56px;
+        width: 56px;
+        border-radius: 28px;
+        background: white;
+        justify-self: center;
+        align-self: center;
+        z-index: 3;
+        box-shadow: 5px 10px rgba(0, 0, 0, .10);
+}
